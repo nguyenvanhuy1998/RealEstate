@@ -5,7 +5,7 @@ import { openAuthSessionAsync } from "expo-web-browser";
 export const config = {
     platform: "com.gemini.restate",
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
-    projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT,
+    projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
 };
 
 export const client = new Client();

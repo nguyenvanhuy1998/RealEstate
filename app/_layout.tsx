@@ -2,6 +2,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import "./global.css";
 import { useEffect } from "react";
+import GlobalProvider from "@/lib/global-provider";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -23,10 +24,12 @@ export default function RootLayout() {
         return null;
     }
     return (
-        <Stack
-            screenOptions={{
-                headerShown: false,
-            }}
-        />
+        <GlobalProvider>
+            <Stack
+                screenOptions={{
+                    headerShown: false,
+                }}
+            />
+        </GlobalProvider>
     );
 }
