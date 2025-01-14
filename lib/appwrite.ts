@@ -116,6 +116,7 @@ export async function getProperties({
     query: string;
     limit?: number;
 }) {
+    console.log({ query, filter, limit });
     try {
         // Query giảm dần
         const buildQuery = [Query.orderDesc("$createdAt")];
